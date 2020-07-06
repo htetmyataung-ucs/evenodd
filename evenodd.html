@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Devided Example</title>
+        <style>
+            *{box-sizing: border-box;}
+            .main
+            {
+                width:350px;
+                height:300px;
+                margin:40px;
+                background-color: whitesmoke;
+                padding:40px;
+            }
+            
+           button{
+               margin-left: 70px;
+           }
+           p{
+               font-size: large;
+               font-weight: bold;
+           }
+           .even{color: green;}
+           .odd{color:red;}
+
+        </style>
+       
+    </head>
+    <body>
+        <div class="main">
+            <form>
+                <label>From:</label>
+                <input type="number" placeholder="first number" id="number1"><br><br>
+                <label>To :</label>
+                <input type="number" placeholder="second number" id="number2" style="margin-left: 14px;"><br><br>
+                <button type="button" onclick="filterNum()">Filter</button>
+            </form>
+        <p>Even Number:=><span class="even" id="even"></span></p>
+        <p>Odd Number:=><span class="odd" id="odd"></span></p>
+        </div>
+        </div>
+        <script>
+           function filterNum()
+           {
+            var i=parseInt(document.getElementById("number1").value);
+                
+                var j=parseInt(document.getElementById("number2").value);
+                for(var s=i ; s <=j; s++)
+                {
+                    if(s%2==0)
+                    {
+                        document.getElementById("even").innerHTML+=s+",";
+                    }
+                    else{
+                        document.getElementById("odd").innerHTML+=s+",";
+                    }
+
+                }
+           }
+        </script>
+    </body>
+</html>
